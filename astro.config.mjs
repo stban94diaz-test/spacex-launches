@@ -17,5 +17,5 @@ export default defineConfig({
     mode: 'standalone',
   }),
   base: BASE_PROJECT,
-  site: 'https://stban94diaz.github.io',
+  site: 'https://stban94diaz-test.github.io',
 });
