@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getLaunchBy } from "../../services/spacex";
+
+const { id } = Astro.params;
+
+export const prerender = false; // Ahora esto es server
+
+if (!id) return Astro.redirect("/");
+
+let launch = await getLaunchBy({ id });
+---
+
+<Layout title={`Lansamiento ${id}`}>
+  <article class="flex flex-col justify-center gap-y-4">
+    <img
+      class="w-52 h-auto"
+      src={launch.links.patch.small}
+      alt={launch.name}
+      style={`view-transition-name: launch-img-${id};`}
+    />
+    <h2 class="text-4xl font-bold">
+      Launch #{launch.flight_number}
+    </h2>
+    <p class="text-lg">{launch.details}</p>
+  </article>
+</Layout>

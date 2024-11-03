@@ -11,7 +11,7 @@
     "editor.defaultFormatter": "prettier"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "prettier"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "prettier"
