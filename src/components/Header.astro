@@ -1,4 +1,5 @@
 ---
+import { BASE_PROJECT } from "../constants/general";
 import HeaderButton from "./HeaderButton.astro";
 
 console.log("javascript");
@@ -16,7 +17,7 @@ console.log("javascript");
   <nav
     class="flex flex-col items-center justify-between w-full text-center md:flex-row"
   >
-    <HeaderButton href="/">
+    <HeaderButton href={`/${BASE_PROJECT}`}>
       <svg
         slot="before"
         width="24"
@@ -37,7 +38,7 @@ console.log("javascript");
       </svg>
       Últimos lanzamientos
     </HeaderButton>
-    <HeaderButton href="/about">
+    <HeaderButton href={`/${BASE_PROJECT}/about`}>
       <svg
         slot="before"
         width="24"
@@ -56,7 +57,7 @@ console.log("javascript");
       </svg>
       Sobre el proyecto
     </HeaderButton>
-    <HeaderButton href="/oldest">
+    <HeaderButton href={`/${BASE_PROJECT}/oldest`}>
       <svg
         slot="before"
         width="24"

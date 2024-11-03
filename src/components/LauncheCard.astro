@@ -1,4 +1,6 @@
 ---
+import { BASE_PROJECT } from "../constants/general";
+
 interface Props {
   id: string;
   img: string;
@@ -13,7 +15,7 @@ const successText = success ? "success" : "failure";
 
 <a
   class="rounded-lg border shadow-md bg-gray-800 border-r-gray-700 hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
-  href={`/launch/${id}`}
+  href={`/${BASE_PROJECT}/launch/${id}`}
 >
   <picture class="flex justify-center p-4">
     <img
