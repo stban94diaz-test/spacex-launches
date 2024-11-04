@@ -7,9 +7,11 @@ import preact from '@astrojs/preact';
 
 import vercel from '@astrojs/vercel/serverless';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
   output: 'hybrid',
-  adapter: vercel(),
+  adapter: netlify(),
 });
